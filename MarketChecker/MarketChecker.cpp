@@ -1,5 +1,8 @@
 #include "MarketChecker.h"
 
-class MarketChecker {
+int MarketChecker::test() {
+	auto response = cpr::Get(cpr::Url{ "http://httpbin.org/get" });
+	std::cout << response.text << std::endl;
+	return 0;
+}
 
-};

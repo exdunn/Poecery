@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\libcpr.1.10.5\build\native\libcpr.props" Condition="Exists('packages\libcpr.1.10.5\build\native\libcpr.props')" />
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -78,11 +79,14 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
-      <AdditionalDependencies />
       <SubSystem>Windows</SubSystem>
       <EntryPointSymbol>main</EntryPointSymbol>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\alexh\source\repos\Poecery\packages\libcpr.1.10.5\build\native\Win32\Debug\lib;C:\Users\alexh\source\repos\Poecery\packages\libcpr.1.10.5\build\native\x64\Debug\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -131,9 +135,25 @@
     <ClInclude Include="Forms\ShoppingListForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="MarketChecker.h" />
+    <ClInclude Include="MarketChecker\MarketChecker.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\ShoppingListForm.resx">
+      <DependentUpon>Forms\ShoppingListForm.h</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="packages\libcpr.1.10.5\build\native\libcpr.targets" Condition="Exists('packages\libcpr.1.10.5\build\native\libcpr.targets')" />
   </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\libcpr.1.10.5\build\native\libcpr.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\libcpr.1.10.5\build\native\libcpr.props'))" />
+    <Error Condition="!Exists('packages\libcpr.1.10.5\build\native\libcpr.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\libcpr.1.10.5\build\native\libcpr.targets'))" />
+  </Target>
 </Project>

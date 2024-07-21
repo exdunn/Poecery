@@ -33,8 +33,9 @@
     <ClInclude Include="Forms\ShoppingListForm.h">
       <Filter>Forms</Filter>
     </ClInclude>
-    <ClInclude Include="MarketChecker.h">
-      <Filter>Header</Filter>
-    </ClInclude>
+    <ClInclude Include="MarketChecker\MarketChecker.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
