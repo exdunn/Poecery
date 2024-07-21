@@ -13,18 +13,18 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SearchForm.cpp">
+    <ClCompile Include="Forms\SearchForm.cpp">
       <Filter>Forms</Filter>
     </ClCompile>
-    <ClCompile Include="ShoppingListForm.cpp">
+    <ClCompile Include="Forms\ShoppingListForm.cpp">
       <Filter>Forms</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SearchForm.h">
+    <ClInclude Include="Forms\SearchForm.h">
       <Filter>Forms</Filter>
     </ClInclude>
-    <ClInclude Include="ShoppingListForm.h">
+    <ClInclude Include="Forms\ShoppingListForm.h">
       <Filter>Forms</Filter>
     </ClInclude>
   </ItemGroup>

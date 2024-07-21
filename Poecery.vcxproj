@@ -120,14 +120,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SearchForm.cpp" />
-    <ClCompile Include="ShoppingListForm.cpp" />
+    <ClCompile Include="Forms\SearchForm.cpp" />
+    <ClCompile Include="Forms\ShoppingListForm.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SearchForm.h">
+    <ClInclude Include="Forms\SearchForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="ShoppingListForm.h">
+    <ClInclude Include="Forms\ShoppingListForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
