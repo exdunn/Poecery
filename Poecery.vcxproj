@@ -122,6 +122,7 @@
   <ItemGroup>
     <ClCompile Include="Forms\SearchForm.cpp" />
     <ClCompile Include="Forms\ShoppingListForm.cpp" />
+    <ClCompile Include="MarketChecker\MarketChecker.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Forms\SearchForm.h">
@@ -130,6 +131,7 @@
     <ClInclude Include="Forms\ShoppingListForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="MarketChecker.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

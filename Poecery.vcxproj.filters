@@ -11,6 +11,9 @@
     <Filter Include="Forms">
       <UniqueIdentifier>{de2ce4b1-b8c9-4666-a243-763959d459f6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header">
+      <UniqueIdentifier>{6e7df435-7d28-4867-973f-fda29dc13892}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Forms\SearchForm.cpp">
@@ -19,6 +22,9 @@
     <ClCompile Include="Forms\ShoppingListForm.cpp">
       <Filter>Forms</Filter>
     </ClCompile>
+    <ClCompile Include="MarketChecker\MarketChecker.cpp">
+      <Filter>MarketChecker</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Forms\SearchForm.h">
@@ -26,6 +32,9 @@
     </ClInclude>
     <ClInclude Include="Forms\ShoppingListForm.h">
       <Filter>Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="MarketChecker.h">
+      <Filter>Header</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
